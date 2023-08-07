@@ -32,8 +32,8 @@ const register = async (req, res) => {
     role,
     verificationToken,
   });
-  const origin = "http://localhost:3000";
-  // const newOrigin = server url
+  // const origin = "http://localhost:5000";
+  const origin = "https://thebase-kf3f.onrender.com/";
   const tempOrigin = req.get("origin");
   const protocol = req.protocol;
   const host = req.get("host");
