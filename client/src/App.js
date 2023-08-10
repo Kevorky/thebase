@@ -3,13 +3,13 @@ import {
   Home,
   Error,
   Register,
-  Register2,
   Login,
   Verify,
   Dashboard,
   ProtectedRoute,
   ForgotPassword,
   ResetPassword,
+  Register2,
 } from "./pages";
 import Navbar from "./components/Navbar";
 import { useGlobalContext } from "./context";

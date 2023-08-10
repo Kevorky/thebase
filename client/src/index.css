@@ -202,10 +202,12 @@ ul {
 }
 .form-label {
   display: block;
-  font-size: var(--smallText);
+  /*font-size: var(--smallText);*/
+  font-size: 1rem;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
   letter-spacing: var(--letterSpacing);
+  margin-top: 16px;
 }
 .form-input,
 .form-textarea {

@@ -33,7 +33,7 @@ const register = async (req, res) => {
     verificationToken,
   });
   // const origin = "http://localhost:5000";
-  const origin = "https://thebase-kf3f.onrender.com/";
+  const origin = "https://thebase-kf3f.onrender.com";
   const tempOrigin = req.get("origin");
   const protocol = req.protocol;
   const host = req.get("host");
@@ -59,16 +59,11 @@ const verifyEmail = async (req, res) => {
   if (!user) {
     throw new CustomError.UnauthenticatedError("Verification Failed");
   }
-  console.log("*** user ", user);
 
-  console.log("*** verif. token ", user.verificationToken);
-  console.log("*** reqst. token ", verificationToken);
   if (user.verificationToken !== verificationToken) {
-    console.log("aha!");
     throw new CustomError.UnauthenticatedError("Verification Failed");
   }
 
-  console.log("*** 3");
   user.isVerified = true;
   user.verified = Date.now();
   user.verificationToken = "";
