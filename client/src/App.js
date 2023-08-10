@@ -33,9 +33,6 @@ function App() {
           <Login />
         </Route>
         <Route path="/register" exact>
-          <Register />
-        </Route>
-        <Route path="/register2" exact>
           <Register2 />
         </Route>
         <ProtectedRoute path="/dashboard" exact>
