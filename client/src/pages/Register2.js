@@ -283,50 +283,50 @@ function Register2() {
             </button>
           </Form>
         </Formik>
-        {alert.show && (
-          <div className={`alert alert-${alert.type}`}>{alert.text}</div>
-        )}
-        {!success && (
-          <form
-            className={loading ? "form form-loading" : "form"}
-            onSubmit={onSubmit}
-          >
-            {/* single form row */}
+        {/*{alert.show && (*/}
+        {/*  <div className={`alert alert-${alert.type}`}>{alert.text}</div>*/}
+        {/*)}*/}
+        {/*{!success && (*/}
+        {/*  <form*/}
+        {/*    className={loading ? "form form-loading" : "form"}*/}
+        {/*    onSubmit={onSubmit}*/}
+        {/*  >*/}
+        {/*    /!* single form row *!/*/}
 
-            <FormRow
-              type="name"
-              name="name"
-              value={values.name}
-              handleChange={handleChange}
-            />
+        {/*    <FormRow*/}
+        {/*      type="name"*/}
+        {/*      name="name"*/}
+        {/*      value={values.name}*/}
+        {/*      handleChange={handleChange}*/}
+        {/*    />*/}
 
-            {/* single form row */}
-            <FormRow
-              type="email"
-              name="email"
-              value={values.email}
-              handleChange={handleChange}
-            />
-            {/* end of single form row */}
-            {/* single form row */}
-            <FormRow
-              type="password"
-              name="password"
-              value={values.password}
-              handleChange={handleChange}
-            />
-            {/* end of single form row */}
-            <button type="submit" className="btn btn-block" disabled={loading}>
-              {loading ? "Loading..." : "Register"}
-            </button>
-            <p>
-              Already a have an account?
-              <Link to="/login" className="login-link">
-                Log In
-              </Link>
-            </p>
-          </form>
-        )}
+        {/*    /!* single form row *!/*/}
+        {/*    <FormRow*/}
+        {/*      type="email"*/}
+        {/*      name="email"*/}
+        {/*      value={values.email}*/}
+        {/*      handleChange={handleChange}*/}
+        {/*    />*/}
+        {/*    /!* end of single form row *!/*/}
+        {/*    /!* single form row *!/*/}
+        {/*    <FormRow*/}
+        {/*      type="password"*/}
+        {/*      name="password"*/}
+        {/*      value={values.password}*/}
+        {/*      handleChange={handleChange}*/}
+        {/*    />*/}
+        {/*    /!* end of single form row *!/*/}
+        {/*    <button type="submit" className="btn btn-block" disabled={loading}>*/}
+        {/*      {loading ? "Loading..." : "Register"}*/}
+        {/*    </button>*/}
+        {/*    <p>*/}
+        {/*      Already a have an account?*/}
+        {/*      <Link to="/login" className="login-link">*/}
+        {/*        Log In*/}
+        {/*      </Link>*/}
+        {/*    </p>*/}
+        {/*  </form>*/}
+        {/*)}*/}
       </Wrapper>
     </>
   );
