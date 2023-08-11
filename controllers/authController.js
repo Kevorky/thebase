@@ -33,7 +33,7 @@ const register = async (req, res) => {
     verificationToken,
   });
   // const origin = "http://localhost:5000";
-  const origin = "https://thebase-kf3f.onrender.com";
+  const origin = "https://thebase-2tbc.onrender.com/";
   const tempOrigin = req.get("origin");
   const protocol = req.protocol;
   const host = req.get("host");
