@@ -10,6 +10,8 @@ const {
   createHash,
 } = require("../utils");
 const crypto = require("crypto");
+// const origin = "http://localhost:5000";
+const origin = "https://thebase-2tbc.onrender.com";
 
 const register = async (req, res) => {
   const { email, name, password } = req.body;
@@ -32,8 +34,6 @@ const register = async (req, res) => {
     role,
     verificationToken,
   });
-  // const origin = "http://localhost:5000";
-  const origin = "https://thebase-2tbc.onrender.com";
   const tempOrigin = req.get("origin");
   const protocol = req.protocol;
   const host = req.get("host");
@@ -154,7 +154,6 @@ const forgotPassword = async (req, res) => {
   if (user) {
     const passwordToken = crypto.randomBytes(70).toString("hex");
     // send email
-    const origin = "http://localhost:3000";
 
     await sendResetPasswordEmail({
       name: user.name,
